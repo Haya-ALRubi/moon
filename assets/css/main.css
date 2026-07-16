@@ -221,6 +221,12 @@ a{
     .content{
         width: 100%;
     }
+    .sellers .row{
+        column-gap: 20px;
+    }
+    .product{
+        width: calc((100% - 20px) / 2);
+    }
 }
 
 
