@@ -1,3 +1,5 @@
+/* ALL page style */
+
 *{
     margin: 0;
     padding: 0;
@@ -12,9 +14,10 @@ ul{
 a{
     text-decoration: none;
 }
-.header{
-    padding: 21.84px 0;
-}
+
+
+/* Common style */
+
 .container{
     width: calc(100% - 330px);
     margin: auto;
@@ -22,8 +25,20 @@ a{
 .row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+}
+
+
+/* Header style */
+
+.menu-icon{
+    display: none;
+}
+.header{
+    padding: 21.84px 0;
+}
+.header .row{
+    justify-content: space-between;
 }
 
 .menu ul{
@@ -38,6 +53,8 @@ a{
     display: flex;
     gap: 24px;
 }
+
+/* Hero section style */
 
 .slider{
     height: 642px;
@@ -80,31 +97,40 @@ a{
    
 }
 
+/* Collections style */
+
 .collections{
     padding: 80px 0;
-    text-align: center;
-    color: #3A3845;
+}
+.collections .row{
+    gap: 30px;
 }
 
 .collection{
-    display: flex;
-    flex-direction: column;
     width: calc((100% - 90px) / 4);
-    gap: 20px;
     text-transform: uppercase;
+    text-align: center;
+    color: #3A3845;
+
+
 }
 .collection img{
     width: 100%;
 }
-
-.best-sellers{
-    text-align: center;
-    color: #3A3845;
-    margin-bottom: 48px;
+.collection h4{
+    margin-top: 24px;
 }
 
+/* Best sellers style */
+
+
 .sellers{
+    padding-bottom: 80px;
     color: #3A3845;
+}
+.best-sellers{
+    text-align: center;
+    margin-bottom: 48px;
 }
 .product{
     display: flex;
@@ -134,27 +160,37 @@ a{
 .sellers .row{
     row-gap: 40px;
     column-gap: 30px;
-    align-items: flex-start;
-    justify-content: flex-start;
 }
 
-.btn-add-to-cart{
-    background-color: white;
-    border-style: solid;
-    border-width: 1px;
+.btn-cart{
     width: 100%;
-    height: 40px;
+    height: 39px;
+    background-color: white;
+    border: 1px solid #3A3845;
+    color: #3A3845;
+    font-size: 12px;
+    font-weight: 600;
     margin-top: 20px;
-}
-
-.btn-add-to-cart a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    color: #3A3845;
-   
+}
+
+/* Media Query */
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+    .menu{
+        display: none;
+    }
+    .icon-hidden{
+        display: none;
+    }
+    .container{
+        width: calc(100% - 40px);
+    }
+    .menu-icon{
+    display:block;
+}
 }
 
 
